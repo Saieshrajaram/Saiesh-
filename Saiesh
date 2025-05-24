@@ -1,0 +1,74 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Date Invite</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ffe6f0, #fff0f5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', cursive;
+    }h1 {
+  font-size: 2.5em;
+  color: #ff69b4;
+  text-shadow: 1px 1px #fff;
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  background-color: #ffb6c1;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  margin: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.flower {
+  position: absolute;
+  width: 40px;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100px) rotate(0deg); }
+  100% { transform: translateY(110vh) rotate(360deg); }
+}
+
+  </style>
+</head>
+<body>
+  <h1>Will Tazzz go on a date with Saiesh?</h1>
+  <div class="buttons">
+    <button class="btn">Yes!</button>
+    <button class="btn">Absolutely!</button>
+  </div>  <script>
+    // Generate falling flowers
+    for (let i = 0; i < 30; i++) {
+      const flower = document.createElement('img');
+      flower.src = 'https://i.imgur.com/Hh7YbM7.png'; // flower emoji image
+      flower.className = 'flower';
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDuration = (3 + Math.random() * 5) + 's';
+      document.body.appendChild(flower);
+    }
+  </script></body>
+</html>
